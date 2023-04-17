@@ -1,0 +1,17 @@
+.header {
+    
+    &__text-box {
+        align-items: center;
+    }
+
+    &__description {
+        margin-top: 1.5rem;
+        font-size: 2.6rem;
+        font-family: 'Nunito', sans-serif;
+        color: $color-grey;
+        line-height: 1.2;
+        font-weight: 500;
+    }
+
+
+}

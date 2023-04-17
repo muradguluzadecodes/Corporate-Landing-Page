@@ -1,0 +1,56 @@
+.heading-1 {
+    font-size: 4.8rem;
+    color: $color-primary;
+    font-weight: 700;
+}
+
+.heading-3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: $color-secondary;
+    text-transform: uppercase;
+}
+
+
+.heading-2 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: $color-primary;
+}
+
+.text-description {
+    font-size: 1.6rem;
+    font-family: 'Open Sans', sans-serif;
+    color: $color-grey;
+    
+}
+
+.section-heading {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    // row-gap: 1rem;
+    
+
+    h2 {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: $color-secondary;
+        text-transform: uppercase;
+    }
+
+    p {
+        font-size: 3.8rem;
+        font-weight: 700;
+        line-height: 42px;
+        color: $color-primary;
+        margin-bottom: 4rem;
+    }
+    
+}
+
+.sec-p {
+    padding: 6rem 0;
+}

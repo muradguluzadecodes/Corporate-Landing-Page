@@ -1,0 +1,83 @@
+
+//*********************************//
+//MAIN BUTTON 
+
+.btn-main {
+    border-radius: 5px;
+    color: #fff;
+    background-color: $color-secondary;
+    display: inline-block;
+    text-decoration: none;
+    transition: all .2s ease;
+
+    &:hover {
+     background-color: darken($color-secondary, 10%);
+     color: #fff;
+     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+    &:active {
+        transform: translateY(2px);
+    }
+
+}
+
+
+//*********************************//
+//BUTTON WITH RIGHT ARROW
+
+.section-btn {
+    font-size: 1.8rem;
+    padding: 1rem 4rem;
+    font-weight: 600;
+}
+
+.btn-right-arrow {
+        fill: #fff;
+        width: 2rem;
+        font-weight: 300;
+        margin-left: .6rem;
+        transition: all .2s ease-in;
+
+}
+
+
+.section-btn:hover .btn-right-arrow {
+    transform: translateX(.8rem);
+}
+
+
+//*********************************//
+//CARD DESIGN
+
+.my-card {
+    padding: 3rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;;
+    text-align: center;
+    transition: all .4s ease;
+    height: 100%;
+
+    h3 {
+        font-size: 2.4rem;
+        color: $color-primary;
+        font-weight: 700;
+        margin-bottom: 1.8rem;
+    }
+    
+    p {
+        font-size: 1.6rem;
+        color: $color-grey;
+    }
+    
+    img {
+        padding: 2rem 4rem;   
+        transition: all .4s ease;
+    }
+    
+    &:hover {
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        img {
+            transform: scale(.9);
+        }
+    }
+}
