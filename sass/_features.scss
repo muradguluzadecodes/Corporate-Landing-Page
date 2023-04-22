@@ -1,0 +1,59 @@
+.features {
+    &__tabs {
+        display: flex;
+        align-items: center;
+        column-gap: 1.4rem;
+        border-bottom: 1px solid #dddddd;
+        padding: 0;
+    }
+    
+    &__tab {
+        padding: 1.2rem 0;
+
+        &::after {
+            content: '';
+            width: 100%;
+            height: 3px;
+            color: $color-secondary;
+            top: 0%;
+            left: 0;
+        }
+    }
+
+    
+
+    &__heading {
+        font-size: 1.6rem;
+        color: $color-primary;
+        font-weight: 600;
+        margin: 0;
+        text-transform: uppercase;
+    }
+    
+
+    &__heading-box {
+        display: flex;
+        column-gap: .6rem;
+    }
+     
+    &__icon-check {
+        font-size: 2.2rem;
+        color: $color-secondary;
+    }
+
+
+    .icon {
+        &-time {
+            width: 5.6rem;
+        }
+
+        &-chess {
+            width: 7rem;
+        }
+
+        &-send {
+            width: 7.6rem;
+        }
+    }
+
+}

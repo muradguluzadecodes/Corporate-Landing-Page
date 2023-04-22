@@ -1,0 +1,25 @@
+.counts {
+
+    &__content-box-2 {
+        margin-right: 3.6rem;
+    }
+
+
+    &__emoji {
+        &-1 {
+            color: $color-secondary;
+        }
+
+        &-2 {
+            color: $color-orange;
+        }
+
+        &-3 {
+            color: $color-green;
+        }
+
+        &-4 {
+            color: $color-burgundy;
+        }
+    }
+}

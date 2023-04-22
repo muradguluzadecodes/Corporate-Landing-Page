@@ -1,0 +1,17 @@
+.pricing {
+    &__free {
+        color: $color-blue;
+    }
+
+    &__starter {
+        color: $color-green;
+    }
+    
+    &__business {
+        color: $color-orange;
+    }
+
+    &__ultimate {
+        color: $color-pink;
+    }
+}

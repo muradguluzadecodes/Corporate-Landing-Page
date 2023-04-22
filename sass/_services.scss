@@ -1,0 +1,84 @@
+@mixin features-card {
+    
+    .arrow-right {
+        fill: #fff;
+        transition: all .2s ease;
+       }
+
+       .icon-box {
+           background-color: #fff;
+           transition: all .2s ease;
+       }
+
+       a, h3, p {
+           color: #fff;
+           transition: all .2s ease;
+       }
+}
+
+
+
+@mixin card-features($main-color, $icon-box-color, ) {
+    transition: all .2s ease;
+        border-bottom: 3px solid $main-color;
+
+
+        .icon-box {
+            background-color: $icon-box-color;
+        }
+    
+        
+        .icon {
+            fill: $main-color;
+        }
+
+    
+        
+        a {
+            color: $main-color;
+        }
+    
+        .arrow-right {
+        fill: $main-color; 
+        }
+      
+        &:hover {
+            background-color: $main-color;
+           @include features-card;
+        }
+        
+     }
+
+
+
+.services {
+
+    &__card-1 {
+    @include card-features($color-blue, #DBF3fE)
+     };
+
+     &__card-2 {
+        @include card-features($color-orange, #fde3c4)
+     }
+
+     &__card-3 {
+        @include card-features($color-green, #cffddf)
+     }
+
+     &__card-4 {
+        @include card-features($color-red, #fef7f8)
+     }
+
+     &__card-5 {
+        @include card-features($color-purple, #f8e4fd)
+     }
+
+     &__card-6 {
+        @include card-features($color-pink, #feecf7)
+     }
+}
+
+
+
+
+

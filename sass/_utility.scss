@@ -11,12 +11,32 @@
     text-transform: uppercase;
 }
 
+.heading-3-2nd {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: $color-primary;
+}
+
 
 .heading-2 {
     font-size: 2.4rem;
     font-weight: 700;
     color: $color-primary;
 }
+
+.heading-2-2nd {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: $color-primary;
+}
+
+.heading-4 {
+    font-size: 18px;
+    margin: 0;
+    font-weight: 700;
+    color: $color-primary;
+}
+
 
 .text-description {
     font-size: 1.6rem;
@@ -53,4 +73,13 @@
 
 .sec-p {
     padding: 6rem 0;
+}
+
+.sec-p-1 {
+    padding: 8rem 0;
+}
+
+.na {
+    text-decoration: line-through;
+    color: #bababa;
 }
