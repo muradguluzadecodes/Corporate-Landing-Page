@@ -32,6 +32,7 @@
     font-weight: 600;
 }
 
+
 .btn-right-arrow {
         fill: #fff;
         width: 2rem;
@@ -44,6 +45,18 @@
 
 .section-btn:hover .btn-right-arrow {
     transform: translateX(.8rem);
+}
+
+.btn-submit {
+
+
+        background: $color-secondary;
+        border: 0;
+        padding: 1rem 3rem;
+        color: #fff;
+        transition: 0.4s;
+        border-radius: 4px;
+        font-size: 1.6rem;
 }
 
 
@@ -351,7 +364,7 @@
 .img-box {
     position: relative;
     overflow: hidden;
-
+    transition: all .2s ease;
 
     img {
         transition: all .5s ease-in-out;
@@ -361,7 +374,8 @@
     &:hover .hover-box {
         opacity: 1;
         visibility: visible;
-        display: flex;
+        // display: flex;
+        transform: scale(1);
        }
 
     &:hover img {
@@ -384,14 +398,8 @@
     background-color: rgba(#fff, .7);
     opacity: 0;
     visibility: hidden;
-    display: none;
-    transform: scale(0);
-    transition: all .4s ease-in-out;
-    animation-name: portfolio-box;
-    animation-duration: .4s;
-    animation-timing-function: ease-out;
-    animation-fill-mode: both;
-    animation-iteration-count: 1;
+    transition: all .4s ease;
+    transform: scale(.5);
     
 
     h4 {
@@ -447,14 +455,237 @@
 }
 
 
-@keyframes portfolio-box {
-    0% {
-        opacity: 0;
-        transform: scale(.5);
+.portfolio-filter {
+    display: flex;
+    column-gap: 1rem;
+
+    li {
+        cursor: pointer;
+        display: inline-block;
+        padding: 1rem 2rem;
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 1;
+        color: $color-grey;
+        // margin: 0 4px 8px 4px;
+        transition: 0.3s;
+        border-radius: 50px;
     }
 
-    100% {
-        opacity: 1;
-        transform: scale(1);
+
+    .active {
+        color: $color-secondary;
+        border: 1px solid currentColor;
+    }
+}
+
+
+//*********************************//
+//TEAM CARD DESIGN 
+
+.team-card {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transition: all .3s ease;
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+
+    &:hover {
+        transform: scale(1.08);
+
+
+        .icon-box {
+            transform: translateX(0);
+        }
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .info-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 2rem 1.5rem;
+
+
+        h4 {
+            font-weight: 700;
+            // margin-bottom: 5px;
+            font-size: 2rem;
+            color: $color-primary
+        }
+
+        span {
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: $color-grey-light;
+        }
+
+        p {
+            font-style: italic;
+            font-size: 1.4rem;
+            padding-top: 1.5rem;
+            line-height: 2.6rem;
+            color: $color-grey-light-1;
+        }
+    }
+
+    .icon-box {
+        padding: 1.2rem 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 1.6rem;
+        background-color: rgba(#fff, .5);
+        position: absolute;
+        border-radius: .5rem;
+        top: 1rem;
+        right: 1rem;
+        transition: all .4s ease-in;
+        transform: translateX(10rem);
+
+
+        .icon {
+            width: 1.6rem;
+            fill: rgba($color-primary, .6);
+            transition: all .2s ease;
+            cursor: pointer;
+
+            &:hover {
+                fill: $color-primary;
+            }
+        }
+    }
+}
+
+//*********************************//
+//BLOG CARD DESIGN
+
+.blog-box {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    cursor: pointer;
+    
+    &:hover {
+        img {
+            transform: scale(1.2) rotate(10deg);
+        }
+
+        h3 {
+            color: $color-secondary;
+        }
+    }
+
+    .blog-img-box {
+        overflow: hidden;
+    }
+
+    img {
+       transition: all .4s ease;
+    }
+    
+    
+    .text-box {
+        padding: 3rem 2rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        // justify-content: space-between;
+        // align-items: space-between;
+    }
+    
+
+
+
+    span {
+        font-size: 1.6rem;
+        color: rgba($color-primary, .6);
+        font-weight: 700;
+        display: inline-block;
+        margin-bottom: 1rem;
+    }
+
+    h3 {
+        font-size: 2.4rem;
+        color: $color-primary;
+        font-weight: 700;
+        margin-bottom: 1.8rem;
+        transition: 0.3s;
+    }
+
+    .link-box {
+        display: flex;
+        align-items: center;
+        column-gap: .6rem;
+        color: $color-secondary;
+        cursor: pointer;
+
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: currentColor;
+    }
+
+    .icon-arrow-right {
+        width: 1.8rem;
+        transform: translateY(2px);
+        fill: currentColor;
+    }
+}
+
+//*********************************//
+//CONTACT BOX 
+
+.contact-box {
+
+    background-color: #fafbff;
+    padding: 3rem;
+
+
+    .icon {
+        font-size: 5.2rem;
+        color: $color-secondary;
+        margin: 0;
+    }
+
+    h3 {
+        font-size: 2rem;
+        color: $color-primary;
+        font-weight: 700;
+        margin: 2rem 0 1rem 0;
+    }
+
+    p {
+        font-family: 'Open Sans', sans-serif;
+        margin: 0;
+        padding: 0;
+    line-height: 2.4rem;
+    font-size: 1.4rem;
+    
+    }
+
+    .form-control {
+        padding: 1rem 1.2rem;
+        font-size: 1.4rem;
+
+    }
+
+    .form-control::placeholder {
+        font-size: 1.4rem;
+    }
+
+    .form-control:focus {
+    outline: none;
+    }
+
+    textarea {
+        max-height: 17rem;
     }
 }

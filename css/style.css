@@ -8413,6 +8413,15 @@ textarea.form-control-lg {
 .section-btn:hover .btn-right-arrow {
   transform: translateX(0.8rem); }
 
+.btn-submit {
+  background: #4154f1;
+  border: 0;
+  padding: 1rem 3rem;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 4px;
+  font-size: 1.6rem; }
+
 .my-card {
   padding: 3rem;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -8600,13 +8609,14 @@ textarea.form-control-lg {
 
 .img-box {
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  transition: all .2s ease; }
   .img-box img {
     transition: all .5s ease-in-out; }
   .img-box:hover .hover-box {
     opacity: 1;
     visibility: visible;
-    display: flex; }
+    transform: scale(1); }
   .img-box:hover img {
     transform: scale(1.2); }
 
@@ -8624,14 +8634,8 @@ textarea.form-control-lg {
   background-color: rgba(255, 255, 255, 0.7);
   opacity: 0;
   visibility: hidden;
-  display: none;
-  transform: scale(0);
-  transition: all .4s ease-in-out;
-  animation-name: portfolio-box;
-  animation-duration: .4s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: both;
-  animation-iteration-count: 1; }
+  transition: all .4s ease;
+  transform: scale(0.5); }
   .hover-box h4, .hover-box .h4 {
     font-size: 2rem;
     color: #012970;
@@ -8665,13 +8669,149 @@ textarea.form-control-lg {
   .hover-box .icon-eye {
     width: 2rem; }
 
-@keyframes portfolio-box {
-  0% {
-    opacity: 0;
-    transform: scale(0.5); }
-  100% {
-    opacity: 1;
-    transform: scale(1); } }
+.portfolio-filter {
+  display: flex;
+  column-gap: 1rem; }
+  .portfolio-filter li {
+    cursor: pointer;
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1;
+    color: #444444;
+    transition: 0.3s;
+    border-radius: 50px; }
+  .portfolio-filter .active {
+    color: #4154f1;
+    border: 1px solid currentColor; }
+
+.team-card {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  transition: all .3s ease;
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px; }
+  .team-card:hover {
+    transform: scale(1.08); }
+    .team-card:hover .icon-box {
+      transform: translateX(0); }
+  .team-card img {
+    width: 100%; }
+  .team-card .info-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem 1.5rem; }
+    .team-card .info-box h4, .team-card .info-box .h4 {
+      font-weight: 700;
+      font-size: 2rem;
+      color: #012970; }
+    .team-card .info-box span {
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: #aaaaaa; }
+    .team-card .info-box p {
+      font-style: italic;
+      font-size: 1.4rem;
+      padding-top: 1.5rem;
+      line-height: 2.6rem;
+      color: #5e5e5e; }
+  .team-card .icon-box {
+    padding: 1.2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1.6rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    border-radius: .5rem;
+    top: 1rem;
+    right: 1rem;
+    transition: all .4s ease-in;
+    transform: translateX(10rem); }
+    .team-card .icon-box .icon {
+      width: 1.6rem;
+      fill: rgba(1, 41, 112, 0.6);
+      transition: all .2s ease;
+      cursor: pointer; }
+      .team-card .icon-box .icon:hover {
+        fill: #012970; }
+
+.blog-box {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  cursor: pointer; }
+  .blog-box:hover img {
+    transform: scale(1.2) rotate(10deg); }
+  .blog-box:hover h3, .blog-box:hover .h3 {
+    color: #4154f1; }
+  .blog-box .blog-img-box {
+    overflow: hidden; }
+  .blog-box img {
+    transition: all .4s ease; }
+  .blog-box .text-box {
+    padding: 3rem 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column; }
+  .blog-box span {
+    font-size: 1.6rem;
+    color: rgba(1, 41, 112, 0.6);
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 1rem; }
+  .blog-box h3, .blog-box .h3 {
+    font-size: 2.4rem;
+    color: #012970;
+    font-weight: 700;
+    margin-bottom: 1.8rem;
+    transition: 0.3s; }
+  .blog-box .link-box {
+    display: flex;
+    align-items: center;
+    column-gap: .6rem;
+    color: #4154f1;
+    cursor: pointer; }
+  .blog-box a {
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: currentColor; }
+  .blog-box .icon-arrow-right {
+    width: 1.8rem;
+    transform: translateY(2px);
+    fill: currentColor; }
+
+.contact-box {
+  background-color: #fafbff;
+  padding: 3rem; }
+  .contact-box .icon {
+    font-size: 5.2rem;
+    color: #4154f1;
+    margin: 0; }
+  .contact-box h3, .contact-box .h3 {
+    font-size: 2rem;
+    color: #012970;
+    font-weight: 700;
+    margin: 2rem 0 1rem 0; }
+  .contact-box p {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 2.4rem;
+    font-size: 1.4rem; }
+  .contact-box .form-control {
+    padding: 1rem 1.2rem;
+    font-size: 1.4rem; }
+  .contact-box .form-control::placeholder {
+    font-size: 1.4rem; }
+  .contact-box .form-control:focus {
+    outline: none; }
+  .contact-box textarea {
+    max-height: 17rem; }
 
 * {
   margin: 0;
@@ -9025,3 +9165,6 @@ ul {
 
 .pricing__ultimate {
   color: #f51f9c; }
+
+.contact__inputs {
+  height: 100%; }
